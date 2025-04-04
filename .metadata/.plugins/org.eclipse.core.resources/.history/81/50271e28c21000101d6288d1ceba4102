@@ -1,0 +1,5 @@
+package com.auth.entity;
+
+public class LoginRequest {
+
+}

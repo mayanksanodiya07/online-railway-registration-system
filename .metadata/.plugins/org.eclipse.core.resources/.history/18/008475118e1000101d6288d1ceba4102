@@ -1,0 +1,11 @@
+package com.auth.repositories;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.registration.entities.User;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+	Optional<com.auth.entities.User> findByEmail(String email);
+}

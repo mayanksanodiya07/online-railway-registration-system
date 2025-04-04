@@ -1,0 +1,16 @@
+package com.auth.entity;
+
+public class LoginRequest {
+    private String username;
+    private String password;
+
+    // Getters and Setters
+}
+package com.auth.dto;
+
+public class LoginRequest {
+    private String username;
+    private String password;
+
+    // Getters and Setters
+}

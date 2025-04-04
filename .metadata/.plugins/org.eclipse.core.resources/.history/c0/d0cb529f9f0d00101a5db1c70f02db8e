@@ -1,0 +1,10 @@
+spring.application.name=RegistrationService
+server.port = 8081
+
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+spring.datasource.username=root
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update  # Options: create, update, validate, none
+spring.jpa.show-sql=true  
+
