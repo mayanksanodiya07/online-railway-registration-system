@@ -1,7 +1,0 @@
-package com.auth.config;
-
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurationAdapter;
-
-public class SpringSecurity extends WebSecurityConfigurationAdapter {
-
-}

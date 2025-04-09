@@ -1,7 +1,5 @@
 package com.auth.entity;
 
-import java.util.List;
-
 import jakarta.persistence.*;
  
 @Entity
@@ -13,7 +11,7 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @Column(name = "username", nullable = true, unique=true)
+    @Column(name = "username", nullable = false, unique=true)
     private String username;
 
 
@@ -55,6 +53,11 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", role=" + role + "]";
 	}	
 
 }

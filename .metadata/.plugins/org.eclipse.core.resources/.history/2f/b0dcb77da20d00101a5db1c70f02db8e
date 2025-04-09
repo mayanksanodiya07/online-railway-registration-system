@@ -1,7 +1,0 @@
-package com.registration.services;
-
-import com.registration.entities.User;
-
-public interface UserService {
-	User add(User user);
-}

@@ -1,5 +1,0 @@
-package com.registration.services;
-
-public interface UserService {
-
-}
