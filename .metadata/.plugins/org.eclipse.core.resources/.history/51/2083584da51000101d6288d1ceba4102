@@ -1,5 +1,0 @@
-package com.auth.service;
-import org.springframework.security.core.userdetails.UserDetailsService;
-public class UserDetailServiceImpl extends UserDetailsService{
-
-}
