@@ -73,12 +73,4 @@ public class UserServiceImpl implements UserService {
         return bookingClient.getBookingsByUserId(id , token );
     }
 
-    // Placeholder - you can implement JWT decoding or call AuthService
-//    private String extractUsernameFromToken(String token) {
-//        // remove "Bearer " prefix
-//        token = token.replace("Bearer ", "");
-//        // decode JWT token and extract username
-//        // You can use JWT library (e.g., io.jsonwebtoken.Jwts) or call /validate from Auth Service
-//        return "decodedUsername";
-//    }
 }
