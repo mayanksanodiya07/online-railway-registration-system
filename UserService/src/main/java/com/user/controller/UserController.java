@@ -17,7 +17,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+    
     // Get user by ID
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) throws AccessDeniedException {
@@ -27,16 +27,16 @@ public class UserController {
     }
 
     // Get currently logged-in user (requires token validation)
-    @GetMapping("/me")
-    public ResponseEntity<User> getCurrentUser( ) throws AccessDeniedException {
-        User user = userService.getCurrentUser( );
-        validateOwnership(user);
-        return ResponseEntity.ok(user);
-    }
+//    @GetMapping("/me")
+//    public ResponseEntity<User> getCurrentUser( ) throws AccessDeniedException {
+//        User user = userService.getCurrentUser( );
+//        validateOwnership(user);
+//        return ResponseEntity.ok(user);
+//    }
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user, @RequestHeader("Authorization") String token ) {
-    	
+
         User created = userService.createUser(user);
         return ResponseEntity.ok(created);
     }
@@ -71,5 +71,15 @@ public class UserController {
             throw new AccessDeniedException("You are not authorized to access this resource.");
         }
     }
+    
+//    public void validateInternalRequest() {
+//    	var auth = SecurityContextHolder.getContext().getAuthentication();
+//    	Object issuer = auth.getDetails();
+//    	
+//        if (!"auth-service".equals(issuer)) {
+//            throw new AccessDeniedException("Unauthorized to create user");
+//   	    }
+//    	    
+//    }
 
 }

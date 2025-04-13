@@ -1,6 +1,7 @@
 package com.user.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -33,8 +34,7 @@ public class User {
     @Column(unique=true)
     private String phoneNumber;
     
-    @Enumerated(EnumType.STRING)
-    private Role role;
+    private List<String> roles;
     
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -82,14 +82,12 @@ public class User {
 		this.phoneNumber = phoneNumber;
 	}
 
-	
-
-	public Role getRole() {
-		return role;
+	public List<String> getRoles() {
+		return roles;
 	}
 
-	public void setRole(Role role) {
-		this.role = role;
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
 
 	public LocalDateTime getCreatedAt() {
@@ -111,7 +109,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", fullName=" + fullName
-				+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", role=" + role + ", createdAt=" + createdAt
+				+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", roles=" + roles + ", createdAt=" + createdAt
 				+ ", updatedAt=" + updatedAt + "]";
 	}
     

@@ -12,4 +12,10 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleAccessDenied(AccessDeniedException ex) {
 		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ex.getMessage());
 	}
+	
+	@ExceptionHandler(UserNotFoundException.class)
+	public ResponseEntity<String> handleUserNotFound(UserNotFoundException ex) {
+	    return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND); // 404
+	}
+
 }

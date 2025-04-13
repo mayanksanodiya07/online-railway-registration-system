@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.user.client.BookingClient;
 import com.user.entity.User;
+import com.user.exception.UserNotFoundException;
 import com.user.repository.UserRepository;
 
 import java.util.List;
@@ -23,18 +24,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(Long id) {
         return userRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("User not found with ID: " + id));
+            .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + id));
     }
 
-    @Override
-    public User getCurrentUser( ) {
-    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-    	
-    	String username = authentication.getName(); 
-        
-    	return userRepository.findByUsername(username)
-                .orElseThrow(() -> new RuntimeException("User not found with username: " + username));
-    }
+//    @Override
+//    public User getCurrentUser( ) {
+//    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//    	
+//    	String username = authentication.getName(); 
+//        
+//    	return userRepository.findByUsername(username)
+//                .orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
+//    }
 
     @Override
     public User createUser(User user) {

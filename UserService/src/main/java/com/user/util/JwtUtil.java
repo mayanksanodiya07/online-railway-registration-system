@@ -3,6 +3,7 @@ import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.crypto.SecretKey;
 
@@ -24,12 +25,22 @@ public class JwtUtil {
         return extractAllClaims(token).getSubject();
     }
     
-    public String extractRole(String token) {
-        return extractAllClaims(token).get("role", String.class);
+    public List<String> extractRoles(String token) {
+        Claims claims = extractAllClaims(token);
+        Object rolesObj = claims.get("roles");
+
+        if (rolesObj instanceof List<?>) {
+            List<?> rawList = (List<?>) rolesObj;
+            return rawList.stream()
+                          .filter(item -> item instanceof String)
+                          .map(item -> (String) item)
+                          .toList();
+        }
+
+        return List.of(); // return empty list if no roles or wrong format
     }
-    
-    
-    
+
+
     public boolean isTokenValid(String token) {
         try {
             Claims claims = extractAllClaims(token);

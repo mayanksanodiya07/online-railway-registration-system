@@ -6,7 +6,7 @@ import com.user.entity.User;
 
 public interface UserService {
     User getUserById(Long id);
-    User getCurrentUser( );
+//    User getCurrentUser( );
     User createUser(User user);
     User updateUser(Long id, User updatedUser);
     void deleteUser(Long id);
