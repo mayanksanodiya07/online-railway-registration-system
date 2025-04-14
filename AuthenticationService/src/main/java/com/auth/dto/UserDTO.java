@@ -1,6 +1,7 @@
 package com.auth.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
   
 public class UserDTO {
 	  
@@ -9,7 +10,7 @@ public class UserDTO {
 	    private String fullName;
 	    private String email;
 	    private String phoneNumber;
-	    private Role role;
+	    private List<String> roles;
 	    private LocalDateTime createdAt;
 	    private LocalDateTime updatedAt;
 
@@ -52,14 +53,14 @@ public class UserDTO {
 		public void setPhoneNumber(String phoneNumber) {
 			this.phoneNumber = phoneNumber;
 		}
-  
-		public Role getRole() {
-			return role;
+
+		public List<String> getRoles() {
+			return roles;
 		}
 
-		public void setRole(String role) {
-	        this.role = Role.valueOf(role.toUpperCase());
-	    }
+		public void setRoles(List<String> roles) {
+			this.roles = roles;
+		}
 
 		public LocalDateTime getCreatedAt() {
 			return createdAt;
@@ -80,7 +81,7 @@ public class UserDTO {
 		@Override
 		public String toString() {
 			return "User [id=" + id + ", username=" + username + ", fullName=" + fullName
-					+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", role=" + role + ", createdAt=" + createdAt
+					+ ", email=" + email + ", phoneNumber=" + phoneNumber + ", roles=" + roles + ", createdAt=" + createdAt
 					+ ", updatedAt=" + updatedAt + "]";
 		}
 }

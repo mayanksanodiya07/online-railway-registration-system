@@ -2,6 +2,7 @@ package com.train.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,7 +96,7 @@ public class TrainServiceImpl implements TrainService {
 		}
 	}
 
-	@Override
+	@Override 
 	@Transactional
 	public void bookSeats(Long trainId, int seatsToBook) {
 		logger.info("Booking {} seats for train ID {}", seatsToBook, trainId);
@@ -111,7 +112,7 @@ public class TrainServiceImpl implements TrainService {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Not enough seats available!");
 		}
 
-		try { 
+		try {
 			train.setAvailableSeats(train.getAvailableSeats() - seatsToBook);
 			train.setBookedSeats(train.getBookedSeats() + seatsToBook);
 			trainRepository.save(train);
@@ -175,7 +176,7 @@ public class TrainServiceImpl implements TrainService {
 		}, "departure and arrival times");
 	}
 
-	private Train handleUpdate(Long id, java.util.function.Consumer<Train> updateFunction, String updateType) {
+	private Train handleUpdate(Long id, Consumer<Train> updateFunction, String updateType) {
 		return trainRepository.findById(id).map(train -> {
 			try {
 				updateFunction.accept(train);

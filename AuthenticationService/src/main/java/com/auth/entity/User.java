@@ -1,5 +1,7 @@
 package com.auth.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
  
 @Entity
@@ -18,20 +20,10 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false)
-    private Role role;
+    private List<String> roles;
 
 
-    public Role getRole() {
-		return role;
-	}
-
-	public void setRole(Role role) {
-		this.role = role;
-	}
-
-	public Long getId() {
+    public Long getId() {
 		return id;
 	}
 
@@ -55,9 +47,17 @@ public class User {
 		this.password = password;
 	}
 
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", role=" + role + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", roles=" + roles + "]";
 	}	
 
 }
