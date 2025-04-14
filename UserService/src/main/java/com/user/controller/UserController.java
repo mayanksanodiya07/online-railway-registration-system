@@ -19,20 +19,20 @@ public class UserController {
     private UserService userService;
     
     // Get user by ID
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) throws AccessDeniedException {
-        User user = userService.getUserById(id);
-        validateOwnership(user);
-        return ResponseEntity.ok(user);
-    }
-
-    // Get currently logged-in user (requires token validation)
-//    @GetMapping("/me")
-//    public ResponseEntity<User> getCurrentUser( ) throws AccessDeniedException {
-//        User user = userService.getCurrentUser( );
+//    @GetMapping("/{id}")
+//    public ResponseEntity<User> getUserById(@PathVariable Long id) throws AccessDeniedException {
+//        User user = userService.getUserById(id);
 //        validateOwnership(user);
 //        return ResponseEntity.ok(user);
 //    }
+
+    // Get currently logged-in user (requires token validation)
+    @GetMapping("/me")
+    public ResponseEntity<User> getCurrentUser( ) throws AccessDeniedException {
+        User user = userService.getCurrentUser( );
+        validateOwnership(user);
+        return ResponseEntity.ok(user);
+    }
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user, @RequestHeader("Authorization") String token ) {
@@ -41,27 +41,23 @@ public class UserController {
         return ResponseEntity.ok(created);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User updatedUser) throws AccessDeniedException {
-    	User user = userService.getUserById(id);
-    	validateOwnership(user);
-        User updated = userService.updateUser(id, updatedUser);
+    @PutMapping
+    public ResponseEntity<User> updateUser(@RequestBody User updatedUser) throws AccessDeniedException {
+    	
+        User updated = userService.updateUser(updatedUser);
         return ResponseEntity.ok(updated);
     }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id) throws AccessDeniedException {
-    	User user = userService.getUserById(id);
-    	validateOwnership(user);
-        userService.deleteUser(id);
+    
+    @DeleteMapping
+    public ResponseEntity<String> deleteUser() throws AccessDeniedException {
+    	
+        userService.deleteUser();
         return ResponseEntity.ok("User deleted successfully.");
     }
 
-    @GetMapping("/{id}/bookings")
-    public ResponseEntity<List<Object>> getUserBookings(@PathVariable Long id, @RequestHeader("Authorization") String token) throws AccessDeniedException {
-    	User user = userService.getUserById(id);
-    	validateOwnership(user);
-        List<Object> bookings = userService.getBookingsByUserId(id, token);
+    @GetMapping("/bookings")
+    public ResponseEntity<List<Object>> getUserBookings(@RequestHeader("Authorization") String token) throws AccessDeniedException {
+        List<Object> bookings = userService.getBookingsByUserId(token);
         return ResponseEntity.ok(bookings);
     }
     

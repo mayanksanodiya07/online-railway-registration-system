@@ -2,6 +2,7 @@ package com.user.util;
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +15,32 @@ public class JwtUtil {
 
     private final String SECRET_KEY = "mySecretKeyWhichShouldBeVeryLongForSecurity12345"; // Use env var or config
 
+    public String generateToken(String username, List<String>  role) {
+        String token = Jwts.builder()
+            .subject(username)
+            .claim("role", role)
+            .issuedAt(new Date())
+            .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
+            .signWith(getSigningKey())
+            .compact();
+
+        return token;
+    }
+    public String generateInternalToken(String username, List<String> roles) {
+        
+        List<String> updatedRoles = new ArrayList<>(roles);
+        updatedRoles.add("INTERNAL_AUTH");
+
+        String token = Jwts.builder()
+                .subject(username)
+                .claim("roles", updatedRoles)
+                .issuedAt(new Date())
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
+                .signWith(getSigningKey())
+                .compact();
+
+        return token;
+    }
     public Claims extractAllClaims(String token) {
         return Jwts.parser().verifyWith(getSigningKey())
             .build()

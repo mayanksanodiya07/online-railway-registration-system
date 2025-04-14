@@ -5,10 +5,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import com.user.client.AuthClient;
 import com.user.client.BookingClient;
 import com.user.entity.User;
 import com.user.exception.UserNotFoundException;
 import com.user.repository.UserRepository;
+import com.user.util.JwtUtil;
 
 import java.util.List;
 
@@ -20,58 +22,69 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private BookingClient bookingClient;
+
+    @Autowired
+    private AuthClient authClient;
     
-    @Override
-    public User getUserById(Long id) {
-        return userRepository.findById(id)
-            .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + id));
-    }
-
-//    @Override
-//    public User getCurrentUser( ) {
-//    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//    	
-//    	String username = authentication.getName(); 
-//        
-//    	return userRepository.findByUsername(username)
-//                .orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
-//    }
-
+    @Autowired
+    JwtUtil jwtUtil;
+    
     @Override
     public User createUser(User user) {
         
         return userRepository.save(user);
     }
+    
+//    @Override
+//    public User getUserById(Long id) {
+//        return userRepository.findById(id)
+//            .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + id));
+//    }
 
     @Override
-    public User updateUser(Long id, User updatedUser) {
-        User existing = getUserById(id);
+    public User getCurrentUser( ) {
+    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    	
+    	String username = authentication.getName(); 
+        
+    	return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
+    }
+
+    @Override
+    public User updateUser(User updatedUser) {
+        User user = getCurrentUser();
 
         if (updatedUser.getFullName() != null) {
-            existing.setFullName(updatedUser.getFullName());
+        	user.setFullName(updatedUser.getFullName());
         }
 
         if (updatedUser.getEmail() != null) {
-            existing.setEmail(updatedUser.getEmail());
+        	user.setEmail(updatedUser.getEmail());
         }
 
         if (updatedUser.getPhoneNumber() != null) {
-            existing.setPhoneNumber(updatedUser.getPhoneNumber());
+        	user.setPhoneNumber(updatedUser.getPhoneNumber());
         }
 
-        return userRepository.save(existing);
+        return userRepository.save(user);
     }
 
 
     @Override
-    public void deleteUser(Long id) {
-        userRepository.deleteById(id);
+    public void deleteUser() {
+    	User user = getCurrentUser();    	
+
+        String jwt = jwtUtil.generateInternalToken(user.getUsername(), user.getRoles());
+
+    	authClient.deleteUser(user.getUsername(), "Bearer " + jwt);
+        userRepository.deleteById(user.getId());
     }
 
     @Override
-    public List<Object> getBookingsByUserId(Long id, String token) {
-    	
-        return bookingClient.getBookingsByUserId(id , token );
+    public List<Object> getBookingsByUserId(String token) {
+    	User user = getCurrentUser();  
+        return bookingClient.getBookingsByUserId(user.getId() , token );
     }
 
 }

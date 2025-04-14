@@ -5,10 +5,10 @@ import java.util.List;
 import com.user.entity.User;
 
 public interface UserService {
-    User getUserById(Long id);
-//    User getCurrentUser( );
+//    User getUserById(Long id);
+    User getCurrentUser( );
     User createUser(User user);
-    User updateUser(Long id, User updatedUser);
-    void deleteUser(Long id);
-    List<Object> getBookingsByUserId(Long id, String token);
+    User updateUser(User updatedUser);
+    void deleteUser();
+    List<Object> getBookingsByUserId(String token);
 }

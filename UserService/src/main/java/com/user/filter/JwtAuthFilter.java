@@ -14,6 +14,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.user.util.JwtUtil;
 
+import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -37,9 +38,10 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             String token = authHeader.substring(7);
 
             if (jwtUtil.isTokenValid(token)) {
-                String username = jwtUtil.extractUsername(token);
+            	Claims claims = jwtUtil.extractAllClaims(token);
+                String username = claims.getSubject();
                 List<String> roles = jwtUtil.extractRoles(token);
-                
+
 
                 List<GrantedAuthority> authorities = roles.stream()
                 		.map(role -> new SimpleGrantedAuthority("ROLE_" + role))
