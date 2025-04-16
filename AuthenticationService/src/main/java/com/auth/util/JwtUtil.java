@@ -36,11 +36,12 @@ public class JwtUtil {
 //        }
 //    }
 
-    // **Generate JWT Token**
-    public String generateToken(String username, List<String>  role) {
+//     **Generate JWT Token**
+    public String generateToken(Long userId, String username, List<String>  roles) {
         String token = Jwts.builder()
             .subject(username)
-            .claim("role", role)
+            .claim("authUserId", userId)
+            .claim("roles", roles)
             .issuedAt(new Date())
             .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
             .signWith(getSigningKey())
@@ -50,13 +51,14 @@ public class JwtUtil {
         return token;
     }
 
-    public String generateInternalToken(String username, List<String> roles) {
+    public String generateInternalToken(Long userId, String username, List<String> roles) {
       
         List<String> updatedRoles = new ArrayList<>(roles);
         updatedRoles.add("INTERNAL_AUTH");
 
         String token = Jwts.builder()
                 .subject(username)
+                .claim("authUserId", userId)
                 .claim("roles", updatedRoles)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))

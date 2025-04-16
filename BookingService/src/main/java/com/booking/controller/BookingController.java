@@ -18,11 +18,9 @@ public class BookingController {
     private BookingService bookingService;
 
     @PostMapping
-    public ResponseEntity<Object> createBooking(@RequestParam Long trainId,
-                                                @RequestParam int userId,
-                                                @RequestParam int seatsBooked) {
-        Booking booking = bookingService.createBooking(trainId, userId, seatsBooked);
-        return ResponseEntity.status(HttpStatus.CREATED).body(booking);
+    public ResponseEntity<Object> createBooking(@RequestBody Booking booking) {
+        Booking newBooking = bookingService.createBooking(booking);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newBooking);
     }
 
     @GetMapping("/train/{trainId}")
@@ -30,16 +28,34 @@ public class BookingController {
         List<Booking> bookings = bookingService.getBookingsByTrainId(trainId);
         return ResponseEntity.ok(bookings);
     }
+    
+    @GetMapping("/{bookingId}")
+    public ResponseEntity<Booking> getBookingsByBookingId(@PathVariable Long bookingId) {
+        Booking bookings = bookingService.getBookingsByBookingId(bookingId);
+        return ResponseEntity.ok(bookings);
+    }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Booking>> getAllBookings() {
         List<Booking> bookings = bookingService.getAllBookings();
         return ResponseEntity.ok(bookings);
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Booking>> getBookingsByUserId(@PathVariable int userId, @RequestHeader("Authorization") String token ) {
-        List<Booking> bookings = bookingService.getBookingsByUserId(userId);
+    @GetMapping("/user")
+    public ResponseEntity<List<Booking>> getBookingsByUserId(@RequestHeader("Authorization") String token ) {
+        List<Booking> bookings = bookingService.getBookingsByUserId();
         return ResponseEntity.ok(bookings);
     }
+    
+    @PutMapping("/{bookingId}")
+    public ResponseEntity<String> cancelBooking(@PathVariable Long bookingId) {
+    	bookingService.cancelBooking(bookingId);
+    	return ResponseEntity.ok("Booking successfully cancled.");
+    }
+    
+//    @DeleteMapping("/{bookingId}")
+//    public ResponseEntity<String> deleteBooking(@PathVariable Long bookingId) {
+//        bookingService.deleteBooking(bookingId);
+//        return ResponseEntity.ok("Booking successfully deleted.");
+//    }
 }

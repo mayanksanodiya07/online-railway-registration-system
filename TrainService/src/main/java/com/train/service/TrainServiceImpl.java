@@ -126,6 +126,37 @@ public class TrainServiceImpl implements TrainService {
 	}
 
 	@Override
+	@Transactional
+	public void releaseSeats(Long trainId, int seatsToRelease) {
+	    logger.info("Releasing {} seats for train ID {}", seatsToRelease, trainId);
+
+	    Train train = trainRepository.findById(trainId).orElseThrow(
+	            () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Train not found with ID: " + trainId));
+
+	    logger.info("Train found: {} with {} booked seats", train.getTrainName(), train.getBookedSeats());
+
+	    if (seatsToRelease <= 0) {
+	        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Seats to release must be positive");
+	    }
+
+	    if (seatsToRelease > train.getBookedSeats()) {
+	        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cannot release more seats than booked");
+	    }
+
+	    try {
+	        train.setAvailableSeats(train.getAvailableSeats() + seatsToRelease);
+	        train.setBookedSeats(train.getBookedSeats() - seatsToRelease);
+	        trainRepository.save(train);
+	    } catch (Exception e) {
+	        logger.error("Error releasing seats: {}", e.getMessage());
+	        throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+	                "Failed to release seats: " + e.getMessage());
+	    }
+
+	    logger.info("Seats released successfully. Updated available seats: {}", train.getAvailableSeats());
+	}
+
+	@Override
 	public Train updateAvailableSeats(Long id, int availableSeats) {
 		return trainRepository.findById(id).map(train -> {
 			try {

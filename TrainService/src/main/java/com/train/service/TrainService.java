@@ -38,4 +38,6 @@ public interface TrainService {
 
 	Train updateAvailableSeats(Long id, int availableSeats);
 
+	void releaseSeats(Long trainId, int seatsToRelease);
+
 }

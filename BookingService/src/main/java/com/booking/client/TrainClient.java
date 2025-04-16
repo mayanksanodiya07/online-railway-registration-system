@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
@@ -16,4 +17,8 @@ public interface TrainClient {
 
 	@PostMapping("/trains/{id}/book")
 	ResponseEntity<String> bookSeats(@PathVariable("id") Long id, @RequestParam("seats") int seats);
+	
+	@PutMapping("/trains/{id}/release-seats")
+	ResponseEntity<String> releaseSeats(@PathVariable("id") Long trainId, @RequestParam("seats") int seatsToRelease);
+
 }

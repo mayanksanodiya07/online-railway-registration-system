@@ -65,11 +65,12 @@ public class AuthServiceImpl implements AuthService{
         User savedUser = userRepository.save(user);
         logger.info("User '{}' saved to the database with ID: {}", savedUser.getUsername(), savedUser.getId());
 
-        String jwt = jwtUtil.generateInternalToken(savedUser.getUsername(), savedUser.getRoles());
+        String jwt = jwtUtil.generateInternalToken(savedUser.getId(), savedUser.getUsername(), savedUser.getRoles());
 
         UserDTO dto = new UserDTO();
         dto.setUsername(savedUser.getUsername());
         dto.setRoles(savedUser.getRoles());
+        dto.setAuthUserId(savedUser.getId());
 
         try {
             logger.info("Calling User Service to create corresponding user entry...");
@@ -103,8 +104,11 @@ public class AuthServiceImpl implements AuthService{
             SecurityContextHolder.getContext().setAuthentication(authentication);
             User user = userRepository.findByUsername(username);
 
+            System.out.println(user.getId());
             logger.info("Login successful for user: {} (ID: {})", username, user.getId());
-            String token = jwtUtil.generateToken(username, user.getRoles());;
+            
+            String token = jwtUtil.generateToken(user.getId(), username, user.getRoles());
+            
             return new LoginResponse(user.getId(), token); 
 
         } catch (BadCredentialsException e) {

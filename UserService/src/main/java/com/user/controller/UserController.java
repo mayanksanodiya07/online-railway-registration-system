@@ -6,6 +6,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import com.user.dto.BookingDto;
 import com.user.entity.User;
 import com.user.service.UserService;
 
@@ -56,8 +57,8 @@ public class UserController {
     }
 
     @GetMapping("/bookings")
-    public ResponseEntity<List<Object>> getUserBookings(@RequestHeader("Authorization") String token) throws AccessDeniedException {
-        List<Object> bookings = userService.getBookingsByUserId(token);
+    public ResponseEntity<List<BookingDto>> getUserBookings() throws AccessDeniedException {
+        List<BookingDto> bookings = userService.getBookingsByUserId();
         return ResponseEntity.ok(bookings);
     }
     

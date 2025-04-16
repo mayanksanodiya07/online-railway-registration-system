@@ -5,11 +5,17 @@ import com.booking.entity.Booking;
 
 public interface BookingService {
 
-    Booking createBooking(Long trainId, int userId, int seatsBooked);
+    Booking createBooking(Booking booking);
 
     List<Booking> getBookingsByTrainId(Long trainId);
 
+    Booking getBookingsByBookingId(Long bookingId);
+
+    List<Booking> getBookingsByUserId();
+    
     List<Booking> getAllBookings();
 
-    List<Booking> getBookingsByUserId(int userId);
+	void cancelBooking(Long bookingId);
+
+//	void deleteBooking(Long bookingId);
 }

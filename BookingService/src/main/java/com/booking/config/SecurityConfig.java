@@ -2,6 +2,7 @@ package com.booking.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,11 +21,13 @@ public class SecurityConfig {
 		
 	    http.csrf(csrf -> csrf.disable())
 	        .authorizeHttpRequests(auth -> auth
+	        		.requestMatchers(HttpMethod.GET, "/bookings/user").hasRole("INTERNAL_AUTH")
+	        		.requestMatchers("/bookings/all").hasRole("ADMIN")
 	                .anyRequest().authenticated()
 	        )
 	        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
 	        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-	    System.out.println("okokoko");
+	   
 	    return http.build();
 	}
 

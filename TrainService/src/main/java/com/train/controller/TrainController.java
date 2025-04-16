@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -180,17 +181,15 @@ public class TrainController {
 
 	@PostMapping("/{id}/book")
 	public ResponseEntity<String> bookSeats(@PathVariable Long id, @RequestParam int seats) {
-		try {
-			trainService.bookSeats(id, seats);
-			return ResponseEntity.ok("Seats booked successfully!");
-		} catch (ResponseStatusException e) {
-			return ResponseEntity.status(e.getStatusCode()).body(e.getReason());
-		}
+	    trainService.bookSeats(id, seats); // If an exception is thrown, Spring handles it globally unless you override it
+	    return ResponseEntity.ok("Seats booked successfully!");
 	}
 
-	@PostMapping("/{id}/bookSeats")
-	public ResponseEntity<String> bookSeatsByPost(@PathVariable Long id, @RequestParam int seats) {
-		return bookSeats(id, seats); // reuse the existing method
+	
+	@PutMapping("/{id}/release-seats")
+	public ResponseEntity<String> releaseSeats(@PathVariable Long id, @RequestParam int seats) {
+	    trainService.releaseSeats(id, seats);
+	    return ResponseEntity.ok("Seats released successfully");
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
@@ -201,4 +200,5 @@ public class TrainController {
 		});
 		return ResponseEntity.badRequest().body(errors);
 	}
+
 }

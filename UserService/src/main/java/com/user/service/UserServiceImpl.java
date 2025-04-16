@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.user.client.AuthClient;
 import com.user.client.BookingClient;
+import com.user.dto.BookingDto;
 import com.user.entity.User;
 import com.user.exception.UserNotFoundException;
 import com.user.repository.UserRepository;
@@ -75,16 +76,19 @@ public class UserServiceImpl implements UserService {
     public void deleteUser() {
     	User user = getCurrentUser();    	
 
-        String jwt = jwtUtil.generateInternalToken(user.getUsername(), user.getRoles());
+        String jwt = jwtUtil.generateInternalToken(user.getId(), user.getUsername(), user.getRoles());
 
     	authClient.deleteUser(user.getUsername(), "Bearer " + jwt);
         userRepository.deleteById(user.getId());
     }
 
     @Override
-    public List<Object> getBookingsByUserId(String token) {
-    	User user = getCurrentUser();  
-        return bookingClient.getBookingsByUserId(user.getId() , token );
+    public List<BookingDto> getBookingsByUserId() {
+    	User user = getCurrentUser();    	
+
+        String jwt = jwtUtil.generateInternalToken(user.getId(), user.getUsername(), user.getRoles());
+        
+        return bookingClient.getBookingsByUserId("Bearer " + jwt);
     }
 
 }

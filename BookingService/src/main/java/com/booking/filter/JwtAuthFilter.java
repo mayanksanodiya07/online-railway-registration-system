@@ -2,6 +2,7 @@ package com.booking.filter;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -13,6 +14,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.booking.util.JwtUtil;
 
+import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,13 +35,22 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         String authHeader = request.getHeader("Authorization");
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
+        	
             String token = authHeader.substring(7);
-
             if (jwtUtil.isTokenValid(token)) {
-                String username = jwtUtil.extractUsername(token);
+            	Claims claims = jwtUtil.extractAllClaims(token);
+            	
+                Long userId = claims.get("authUserId", Long.class);
 
+                List<String> roles = jwtUtil.extractRoles(token);
+                
+                List<GrantedAuthority> authorities = roles.stream()
+                		.map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                		.collect(Collectors.toList());
+
+                
                 UsernamePasswordAuthenticationToken authToken =
-                        new UsernamePasswordAuthenticationToken(username, null, List.of());
+                        new UsernamePasswordAuthenticationToken(userId, null, authorities);
                 
                 SecurityContextHolder.getContext().setAuthentication(authToken);
             }

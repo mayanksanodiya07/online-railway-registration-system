@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -28,7 +30,14 @@ public class BookingServiceImpl implements BookingService {
     private TrainClient trainClient;
 
     @Override
-    public Booking createBooking(Long trainId, int userId, int seatsBooked) {
+    public Booking createBooking(Booking booking) {
+    	
+    	Long trainId = booking.getTrainId();
+    	
+    	Long userId = getUserId(); 
+        
+    	int seatsBooked =booking.getSeatsBooked();
+    	
         logger.info("Creating booking for trainId: {}, userId: {}, seats: {}", trainId, userId, seatsBooked);
 
         if (trainId == null || trainId <= 0) {
@@ -80,13 +89,10 @@ public class BookingServiceImpl implements BookingService {
                         "Failed to book seats: " + response.getBody());
             }
 
-            Booking booking = Booking.builder()
-                    .trainId(trainId)
-                    .userId(userId)
-                    .seatsBooked(seatsBooked)
-                    .bookingTime(LocalDateTime.now())
-                    .build();
-
+            booking.setAuthUserId(userId);
+            booking.setBookingTime(LocalDateTime.now());
+            booking.setStatus("CONFIRMED");
+            
             Booking savedBooking = bookingRepository.save(booking);
             logger.info("Booking saved successfully: {}", savedBooking);
             return savedBooking;
@@ -116,6 +122,90 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
+    public Booking getBookingsByBookingId(Long bookingId) {
+        Booking booking = bookingRepository.findById(bookingId)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND, 
+                "Booking not found with ID: " + bookingId
+            ));
+
+        Long userIdFromToken = getUserId();
+
+        if (!booking.getAuthUserId().equals(userIdFromToken)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Booking not found for you.");
+        }
+
+        return booking;
+    }
+    
+//    @Override
+//    public void deleteBooking(Long bookingId) {
+//        // Find booking by ID
+//        Booking booking = bookingRepository.findById(bookingId)
+//            .orElseThrow(() -> new ResponseStatusException(
+//                HttpStatus.NOT_FOUND, 
+//                "Booking not found with ID: " + bookingId
+//            ));
+//
+//        Long userIdFromToken = getUserId();
+//
+//        // Check if the booking belongs to the authenticated user
+//        if (!booking.getAuthUserId().equals(userIdFromToken)) {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Booking not found for you.");
+//        }
+//
+//        // Proceed to delete the booking
+//        bookingRepository.delete(booking);
+//        logger.info("Booking with ID {} has been deleted.", bookingId);
+//    }
+
+    @Override
+    public void cancelBooking(Long bookingId) {
+        Booking booking = bookingRepository.findById(bookingId)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.BAD_REQUEST,
+                "Booking not found with ID: " + bookingId
+            ));
+
+        Long userIdFromToken = getUserId();
+
+        if (!booking.getAuthUserId().equals(userIdFromToken)) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "You are not authorized to cancel this booking.");
+        }
+
+        if ("CANCELLED".equalsIgnoreCase(booking.getStatus())) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Booking is already cancelled.");
+        }
+
+        // Release seats back to train
+        try {
+            ResponseEntity<String> response = trainClient.releaseSeats(booking.getTrainId(), booking.getSeatsBooked());
+
+            if (response.getStatusCode().isError()) {
+                throw new ResponseStatusException(response.getStatusCode(), "Failed to release seats: " + response.getBody());
+            }
+ 
+            booking.setStatus("CANCELLED");
+            bookingRepository.save(booking);
+
+        } catch (feign.FeignException fe) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error while releasing seats: " + fe.getMessage(), fe);
+        }
+    }
+
+    @Override
+    public List<Booking> getBookingsByUserId() {
+    	Long userId = getUserId(); 
+        try {
+            return bookingRepository.findByAuthUserId(userId);
+        } catch (Exception e) {
+            logger.error("Failed to get bookings for user id {}: {}", userId, e.getMessage());
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Failed to get bookings for user id: " + e.getMessage());
+        }
+    }
+
+    @Override
     public List<Booking> getAllBookings() {
         try {
             return bookingRepository.findAll();
@@ -126,14 +216,12 @@ public class BookingServiceImpl implements BookingService {
         }
     }
 
-    @Override
-    public List<Booking> getBookingsByUserId(int userId) {
-        try {
-            return bookingRepository.findByUserId(userId);
-        } catch (Exception e) {
-            logger.error("Failed to get bookings for user id {}: {}", userId, e.getMessage());
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Failed to get bookings for user id: " + e.getMessage());
-        }
+    
+    Long getUserId() {
+    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    	
+    	return (Long) authentication.getPrincipal(); 
+        
     }
+
 }
