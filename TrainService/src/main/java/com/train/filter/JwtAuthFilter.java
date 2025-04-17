@@ -2,7 +2,6 @@ package com.train.filter;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,13 +18,12 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
-	
+
     @Autowired
     private JwtUtil jwtUtil;
-    
+   
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
@@ -33,26 +31,35 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String authHeader = request.getHeader("Authorization");
-
+        
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
-        	
             String token = authHeader.substring(7);
+
             if (jwtUtil.isTokenValid(token)) {
-            	Claims claims = jwtUtil.extractAllClaims(token);
-            	
-                Long userId = claims.get("authUserId", Long.class);
-
-                List<String> roles = jwtUtil.extractRoles(token);
+                Claims claims = jwtUtil.extractAllClaims(token);
                 
-                List<GrantedAuthority> authorities = roles.stream()
-                		.map(role -> new SimpleGrantedAuthority("ROLE_" + role))
-                		.collect(Collectors.toList());
-
+                String issuer = claims.getIssuer();
                 
-                UsernamePasswordAuthenticationToken authToken =
-                        new UsernamePasswordAuthenticationToken(userId, null, authorities);
-                
-                SecurityContextHolder.getContext().setAuthentication(authToken);
+                if ("booking-service".equals(issuer) || "admin-service".equals(issuer)) {
+                	
+                    String serviceName = claims.getSubject(); 
+                    
+                    String serviceRole = claims.get("serviceRole", String.class); 
+                     
+                    List<GrantedAuthority> authorities = List.of(
+                            new SimpleGrantedAuthority("ROLE_" + serviceRole)
+                    );
+                    UsernamePasswordAuthenticationToken authToken =
+                            new UsernamePasswordAuthenticationToken(serviceName, null, authorities);
+                    
+                    SecurityContextHolder.getContext().setAuthentication(authToken);
+                } else {
+                    response.sendError(HttpServletResponse.SC_FORBIDDEN, "Access denied: Invalid token issuer.");
+                    return;
+                }
+            } else {
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT token.");
+                return;
             }
         }
 
