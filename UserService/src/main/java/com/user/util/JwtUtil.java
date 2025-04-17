@@ -14,18 +14,7 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtil {
 
     private final String SECRET_KEY = "mySecretKeyWhichShouldBeVeryLongForSecurity12345"; // Use env var or config
-//
-//    public String generateToken(String username, List<String>  role) {
-//        String token = Jwts.builder()
-//            .subject(username)
-//            .claim("role", role)
-//            .issuedAt(new Date())
-//            .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
-//            .signWith(getSigningKey())
-//            .compact();
-//
-//        return token;
-//    }
+ 
     public String generateInternalToken(Long userId, String username, List<String> roles) {
         
         List<String> updatedRoles = new ArrayList<>(roles);
