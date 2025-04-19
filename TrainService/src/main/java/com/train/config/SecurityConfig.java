@@ -2,7 +2,8 @@ package com.train.config;
 
 import com.train.filter.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration; 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -15,21 +16,20 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 @EnableWebSecurity
 public class SecurityConfig {
 
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthFilter jwtAuthFilter) throws Exception {
 
         http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-
-                // Public APIs
-                .requestMatchers("/trains", "/trains/search", "/trains/{id}").permitAll()
+            		
+            	// Public APIs (No authentication required)
+            	.requestMatchers(HttpMethod.GET, "/trains", "/trains/search", "/trains/{id}").permitAll()
 
                 // BookingService can call booking-specific APIs (filter ensures 'iss' == booking-service)
                 .requestMatchers("/trains/*/book", "/trains/*/release-seats").hasAuthority("ROLE_BOOKING")
 
                 // AdminService can call admin-only APIs (filter ensures 'iss' == admin-service)
-                .requestMatchers("/trains/**").hasAuthority("ROLE_ADMIN")
+                .requestMatchers("/trains/**").hasAuthority("ROLE_ADMIN-SERVICE") 
 
                 // Everything else requires authentication
                 .anyRequest().authenticated()

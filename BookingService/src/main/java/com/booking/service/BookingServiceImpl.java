@@ -217,7 +217,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     
-    Long getUserId() {
+    private Long getUserId() {
     	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
     	
     	return (Long) authentication.getPrincipal(); 

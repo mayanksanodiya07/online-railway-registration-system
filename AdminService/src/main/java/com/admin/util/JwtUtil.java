@@ -1,8 +1,7 @@
 package com.admin.util;
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
+ 
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class JwtUtil {
 		String token = Jwts.builder()
 				.subject("booking-service")
 				.issuer("booking-service")  
-	    		.claim("serviceRole", "BOOKING")  
+	    		.claim("serviceRole", "ADMIN-SERVICE")  
 	    		.issuedAt(new Date())
 	    		.expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
 	    		.signWith(getSigningKey())

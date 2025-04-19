@@ -211,6 +211,7 @@ public class TrainServiceImpl implements TrainService {
 		return trainRepository.findById(id).map(train -> {
 			try {
 				updateFunction.accept(train);
+				System.out.println(train);
 				return trainRepository.save(train);
 			} catch (Exception e) {
 				logger.error("Error updating train {}: {}", updateType, e.getMessage());

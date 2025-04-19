@@ -31,10 +31,14 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String authHeader = request.getHeader("Authorization");
-        
+//        System.out.println( request.getRequestURL());
+//        System.out.println( request.getQueryString());
+
+        System.out.println(authHeader);
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
 
+            System.out.println("is valid");
             if (jwtUtil.isTokenValid(token)) {
                 Claims claims = jwtUtil.extractAllClaims(token);
                 
@@ -45,7 +49,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     String serviceName = claims.getSubject(); 
                     
                     String serviceRole = claims.get("serviceRole", String.class); 
-                     
+                     System.out.println(serviceRole);
                     List<GrantedAuthority> authorities = List.of(
                             new SimpleGrantedAuthority("ROLE_" + serviceRole)
                     );
@@ -62,7 +66,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 return;
             }
         }
-
+        System.out.println("is valid");
         filterChain.doFilter(request, response);
     }
 }

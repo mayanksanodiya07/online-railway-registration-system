@@ -107,7 +107,10 @@ public class TrainController {
 
 	@PatchMapping("/{id}/source")
 	public ResponseEntity<Train> updateTrainSource(@PathVariable Long id, @RequestParam String source) {
+		System.out.println(id);
+		
 		try {
+			
 			Train updatedTrain = trainService.updateTrainSource(id, source);
 			return ResponseEntity.ok(updatedTrain);
 		} catch (ResponseStatusException e) {
