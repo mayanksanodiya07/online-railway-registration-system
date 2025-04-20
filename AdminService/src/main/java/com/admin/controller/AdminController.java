@@ -18,6 +18,7 @@ public class AdminController {
     // Add multiple trains
     @PostMapping("/bulk")
     public ResponseEntity<List<Train>> addMultipleTrains(@RequestBody List<Train> trains) {
+    	System.out.println("okokok");
         List<Train> addedTrains = adminService.addMultipleTrains(trains);
         return ResponseEntity.ok(addedTrains);
     }

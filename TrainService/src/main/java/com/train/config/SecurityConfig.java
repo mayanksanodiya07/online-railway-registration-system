@@ -26,10 +26,10 @@ public class SecurityConfig {
             	.requestMatchers(HttpMethod.GET, "/trains", "/trains/search", "/trains/{id}").permitAll()
 
                 // BookingService can call booking-specific APIs (filter ensures 'iss' == booking-service)
-                .requestMatchers("/trains/*/book", "/trains/*/release-seats").hasAuthority("ROLE_BOOKING")
+                .requestMatchers("/trains/*/book", "/trains/*/release-seats").hasRole("BOOKING")
 
                 // AdminService can call admin-only APIs (filter ensures 'iss' == admin-service)
-                .requestMatchers("/trains/**").hasAuthority("ROLE_ADMIN-SERVICE") 
+                .requestMatchers("/trains/**").hasRole("ADMIN-SERVICE") 
 
                 // Everything else requires authentication
                 .anyRequest().authenticated()

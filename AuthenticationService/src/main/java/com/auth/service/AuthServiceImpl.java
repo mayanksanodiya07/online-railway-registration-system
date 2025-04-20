@@ -104,7 +104,6 @@ public class AuthServiceImpl implements AuthService{
             SecurityContextHolder.getContext().setAuthentication(authentication);
             User user = userRepository.findByUsername(username);
 
-            System.out.println(user.getId());
             logger.info("Login successful for user: {} (ID: {})", username, user.getId());
             
             String token = jwtUtil.generateToken(user.getId(), username, user.getRoles());
