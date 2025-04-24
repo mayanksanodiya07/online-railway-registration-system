@@ -50,6 +50,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
 		<dependency>
     		<groupId>io.jsonwebtoken</groupId>
@@ -64,11 +65,6 @@
     		<version>0.12.6</version>
     		<scope>runtime</scope>
 		</dependency>
-		<dependency>
-    		<groupId>io.github.openfeign</groupId>
-   			 <artifactId>feign-httpclient</artifactId>
-   			 <version>13.5</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson -->
 		<dependency>
@@ -76,6 +72,12 @@
     		<artifactId>jjwt-jackson</artifactId>
     		<version>0.12.6</version>
     		<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+    		<groupId>io.github.openfeign</groupId>
+   			 <artifactId>feign-httpclient</artifactId>
+   			 <version>13.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

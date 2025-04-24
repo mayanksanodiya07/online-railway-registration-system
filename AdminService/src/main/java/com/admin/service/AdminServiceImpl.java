@@ -2,6 +2,9 @@ package com.admin.service;
 
 import com.admin.client.TrainClient;
 import com.admin.model.Train;
+
+import jakarta.ws.rs.NotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+ 	<springProperty name="APP_NAME" source="spring.application.name"/>
  
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) [%thread] %logger{36} - %msg%n</pattern>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %highlight(%5level) --- [${APP_NAME}] [%15.15thread] %-41.41logger{36} - %msg%n
+            </pattern>
         </encoder>
     </appender>
  
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/auth-service.log</file>
+        <file>logs/admin-service.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             
