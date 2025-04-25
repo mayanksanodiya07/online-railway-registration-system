@@ -1,0 +1,289 @@
+2025-04-26 00:40:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Starting BookingServiceApplication using Java 21.0.6 with PID 13440 (C:\Users\Hp\Desktop\Case Study\RMS\BookingService\target\classes started by Hp in C:\Users\Hp\Desktop\Case Study\RMS\BookingService)
+2025-04-26 00:40:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - No active profile set, falling back to 1 default profile: "default"
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.cloud.context.scope.GenericScope      - BeanFactory id=aca7e4a1-fede-3c98-af1c-8254361fcf02
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat initialized with port 8084 (http)
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Initializing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardService         - Starting service [Tomcat]
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardEngine          - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring embedded WebApplicationContext
+2025-04-26 00:40:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1294 ms
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.jpa.internal.util.LogHelper           - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] org.hibernate.Version                     - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.c.i.RegionFactoryInitiator            - HHH000026: Second-level cache disabled
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo       - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Starting...
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool         - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3186f8f5
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Start completed.
+2025-04-26 00:40:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.hibernate.orm.connections.pooling       - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-26 00:40:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator        - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-26 00:40:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:40:07 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] .JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-04-26 00:40:08 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] figuration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory        - Setting initial instance status as: STARTING
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Initializing Eureka in region us-east-1
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Disable delta property : false
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Single vip registry refresh property : null
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Force full registry fetch : false
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application is null : false
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Registered Applications size is zero : true
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application version is -1: true
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Getting all instance registry info from the eureka server
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - The response status is 200
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Starting heartbeat executor: renew interval is: 30
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator      - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Discovery Client initialized at timestamp 1745608208666 with initial instances count: 2
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry         - Registering application BOOKING-SERVICE with eureka with status UP
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608208672, current=UP, previous=STARTING]
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Starting ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat started on port 8084 (http) with context path '/'
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8084
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Started BookingServiceApplication in 4.377 seconds (process running for 5.099)
+2025-04-26 00:40:08 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet         - Initializing Servlet 'dispatcherServlet'
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet         - Completed initialization in 1 ms
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:41:01 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:41:01 [1;31mERROR[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.booking.service.BookingServiceImpl      - Feign client exception: Connection refused: getsockopt executing GET http://localhost:8083/trains/9
+2025-04-26 00:41:01 [1;31mERROR[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.booking.aspect.ServiceLoggerAspect      - [Service]     ❌ BookingServiceImpl.createBooking(..) threw: Connection refused: getsockopt executing GET http://localhost:8083/trains/9 | RetryableException
+2025-04-26 00:41:01 [1;31mERROR[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-1] c.b.aspect.ControllerLoggerAspect         - [Controller]  ❌ BookingController.createBooking(..) threw: Connection refused: getsockopt executing GET http://localhost:8083/trains/9 | RetryableException
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.service.BookingServiceImpl      - Train service response status: 200 OK
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.service.BookingServiceImpl      - Available seats: 182
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.service.BookingServiceImpl      - Seat booking response status: 200 OK
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.service.BookingServiceImpl      - Booking saved successfully: Booking(id=10, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:10.869862600, status=CONFIRMED)
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.aspect.ServiceLoggerAspect      - [Service]     ✅ BookingServiceImpl.createBooking(..) with result: Booking(id=10, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:10.869862600, status=CONFIRMED)
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.booking.aspect.ServiceLoggerAspect      - [Service]     ⏱️ BookingServiceImpl.createBooking(..) executed in 384 ms
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.b.aspect.ControllerLoggerAspect         - [Controller]  ✅ BookingController.createBooking(..) with result: <201 CREATED Created,Booking(id=10, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:10.869862600, status=CONFIRMED),[]>
+2025-04-26 00:42:10 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-4] c.b.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ BookingController.createBooking(..) executed in 384 ms
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.service.BookingServiceImpl      - Train service response status: 200 OK
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.service.BookingServiceImpl      - Available seats: 180
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.service.BookingServiceImpl      - Seat booking response status: 200 OK
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.service.BookingServiceImpl      - Booking saved successfully: Booking(id=11, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:27.221859600, status=CONFIRMED)
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.aspect.ServiceLoggerAspect      - [Service]     ✅ BookingServiceImpl.createBooking(..) with result: Booking(id=11, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:27.221859600, status=CONFIRMED)
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.booking.aspect.ServiceLoggerAspect      - [Service]     ⏱️ BookingServiceImpl.createBooking(..) executed in 30 ms
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.b.aspect.ControllerLoggerAspect         - [Controller]  ✅ BookingController.createBooking(..) with result: <201 CREATED Created,Booking(id=11, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:42:27.221859600, status=CONFIRMED),[]>
+2025-04-26 00:42:27 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-5] c.b.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ BookingController.createBooking(..) executed in 30 ms
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] minMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry         - Unregistering application BOOKING-SERVICE with eureka with status DOWN
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608437780, current=DOWN, previous=UP]
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown         - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol       - Pausing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown         - Graceful shutdown complete
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol       - Stopping ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] .j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown initiated...
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown completed.
+2025-04-26 00:43:57 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Shutting down DiscoveryClient ...
+2025-04-26 00:44:00 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Unregistering ...
+2025-04-26 00:44:00 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - deregister  status: 200
+2025-04-26 00:44:00 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Completed shut down of DiscoveryClient
+2025-04-26 00:44:03 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Starting BookingServiceApplication using Java 21.0.6 with PID 14052 (C:\Users\Hp\Desktop\Case Study\RMS\BookingService\target\classes started by Hp in C:\Users\Hp\Desktop\Case Study\RMS\BookingService)
+2025-04-26 00:44:03 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - No active profile set, falling back to 1 default profile: "default"
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.cloud.context.scope.GenericScope      - BeanFactory id=aca7e4a1-fede-3c98-af1c-8254361fcf02
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat initialized with port 8084 (http)
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Initializing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardService         - Starting service [Tomcat]
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardEngine          - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring embedded WebApplicationContext
+2025-04-26 00:44:04 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1262 ms
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.jpa.internal.util.LogHelper           - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] org.hibernate.Version                     - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.c.i.RegionFactoryInitiator            - HHH000026: Second-level cache disabled
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo       - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Starting...
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool         - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a341e3d
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Start completed.
+2025-04-26 00:44:05 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.hibernate.orm.connections.pooling       - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-26 00:44:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator        - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-26 00:44:06 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:44:06 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] .JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-04-26 00:44:07 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] figuration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory        - Setting initial instance status as: STARTING
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Initializing Eureka in region us-east-1
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Disable delta property : false
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Single vip registry refresh property : null
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Force full registry fetch : false
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application is null : false
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Registered Applications size is zero : true
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application version is -1: true
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Getting all instance registry info from the eureka server
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - The response status is 200
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Starting heartbeat executor: renew interval is: 30
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator      - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Discovery Client initialized at timestamp 1745608447629 with initial instances count: 3
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry         - Registering application BOOKING-SERVICE with eureka with status UP
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608447635, current=UP, previous=STARTING]
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Starting ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat started on port 8084 (http) with context path '/'
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8084
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Started BookingServiceApplication in 4.353 seconds (process running for 5.091)
+2025-04-26 00:44:07 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet         - Initializing Servlet 'dispatcherServlet'
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet         - Completed initialization in 0 ms
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Train service response status: 200 OK
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Available seats: 178
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Seat booking response status: 200 OK
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Booking saved successfully: Booking(id=12, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:12.415124700, status=CONFIRMED)
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ✅ BookingServiceImpl.createBooking(..) with result: Booking(id=12, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:12.415124700, status=CONFIRMED)
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ⏱️ BookingServiceImpl.createBooking(..) executed in 113 ms
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ✅ BookingController.createBooking(..) with result: <201 CREATED Created,Booking(id=12, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:12.415124700, status=CONFIRMED),[]>
+2025-04-26 00:44:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ BookingController.createBooking(..) executed in 116 ms
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] minMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry         - Unregistering application BOOKING-SERVICE with eureka with status DOWN
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608465659, current=DOWN, previous=UP]
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown         - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol       - Pausing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown         - Graceful shutdown complete
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol       - Stopping ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] .j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown initiated...
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown completed.
+2025-04-26 00:44:25 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Shutting down DiscoveryClient ...
+2025-04-26 00:44:28 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Unregistering ...
+2025-04-26 00:44:28 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - deregister  status: 200
+2025-04-26 00:44:28 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(2)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Completed shut down of DiscoveryClient
+2025-04-26 00:44:31 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Starting BookingServiceApplication using Java 21.0.6 with PID 14576 (C:\Users\Hp\Desktop\Case Study\RMS\BookingService\target\classes started by Hp in C:\Users\Hp\Desktop\Case Study\RMS\BookingService)
+2025-04-26 00:44:31 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - No active profile set, falling back to 1 default profile: "default"
+2025-04-26 00:44:31 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-26 00:44:31 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interface.
+2025-04-26 00:44:31 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.cloud.context.scope.GenericScope      - BeanFactory id=aca7e4a1-fede-3c98-af1c-8254361fcf02
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat initialized with port 8084 (http)
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Initializing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardService         - Starting service [Tomcat]
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.catalina.core.StandardEngine          - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring embedded WebApplicationContext
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1278 ms
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.jpa.internal.util.LogHelper           - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] org.hibernate.Version                     - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.c.i.RegionFactoryInitiator            - HHH000026: Second-level cache disabled
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo       - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-26 00:44:32 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Starting...
+2025-04-26 00:44:33 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool         - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aaf73b7
+2025-04-26 00:44:33 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Start completed.
+2025-04-26 00:44:33 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.hibernate.orm.connections.pooling       - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-26 00:44:33 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator        - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-26 00:44:33 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:44:34 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] .JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-26 00:44:34 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] .DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-04-26 00:44:34 [31m WARN[0;39m --- [BOOKING-SERVICE] [           main] figuration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory        - Setting initial instance status as: STARTING
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Initializing Eureka in region us-east-1
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Disable delta property : false
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Single vip registry refresh property : null
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Force full registry fetch : false
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application is null : false
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Registered Applications size is zero : true
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application version is -1: true
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Getting all instance registry info from the eureka server
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - The response status is 200
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Starting heartbeat executor: renew interval is: 30
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator      - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Discovery Client initialized at timestamp 1745608475328 with initial instances count: 2
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry         - Registering application BOOKING-SERVICE with eureka with status UP
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608475334, current=UP, previous=STARTING]
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Starting ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat started on port 8084 (http) with context path '/'
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8084
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [           main] c.booking.BookingServiceApplication       - Started BookingServiceApplication in 4.497 seconds (process running for 5.21)
+2025-04-26 00:44:35 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet         - Initializing Servlet 'dispatcherServlet'
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet         - Completed initialization in 1 ms
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ➡️ TrainClient.getTrainById(..) with arguments: [9]
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ✅ TrainClient.getTrainById(..) with result: <200 OK OK,{id=9, trainName=Pune Intercity, source=Nagpur, destination=Pune Junction, departureTime=2025-04-09T07:15:00, arrivalTime=2025-04-09T15:00:00, availableSeats=176, bookedSeats=224},[cache-control:"no-cache, no-store, max-age=0, must-revalidate", connection:"keep-alive", content-type:"application/json", date:"Fri, 25 Apr 2025 19:14:39 GMT", expires:"0", keep-alive:"timeout=60", pragma:"no-cache", transfer-encoding:"chunked", x-content-type-options:"nosniff", x-frame-options:"DENY", x-xss-protection:"0"]>
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ⏱️ getTrainById executed in 33 ms
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Train service response status: 200 OK
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Available seats: 176
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ➡️ TrainClient.bookSeats(..) with arguments: [9, 2]
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ✅ TrainClient.bookSeats(..) with result: <200 OK OK,Seats booked successfully!,[cache-control:"no-cache, no-store, max-age=0, must-revalidate", connection:"keep-alive", content-length:"26", content-type:"text/plain;charset=UTF-8", date:"Fri, 25 Apr 2025 19:14:39 GMT", expires:"0", keep-alive:"timeout=60", pragma:"no-cache", x-content-type-options:"nosniff", x-frame-options:"DENY", x-xss-protection:"0"]>
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ⏱️ bookSeats executed in 21 ms
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Seat booking response status: 200 OK
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.service.BookingServiceImpl      - Booking saved successfully: Booking(id=13, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:39.462056700, status=CONFIRMED)
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ✅ BookingServiceImpl.createBooking(..) with result: Booking(id=13, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:39.462056700, status=CONFIRMED)
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.booking.aspect.ServiceLoggerAspect      - [Service]     ⏱️ BookingServiceImpl.createBooking(..) executed in 116 ms
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ✅ BookingController.createBooking(..) with result: <201 CREATED Created,Booking(id=13, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:39.462056700, status=CONFIRMED),[]>
+2025-04-26 00:44:39 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-2] c.b.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ BookingController.createBooking(..) executed in 120 ms
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.ControllerLoggerAspect         - [Controller]  ➡️ BookingController.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.aspect.ServiceLoggerAspect      - [Service]     ➡️ BookingServiceImpl.createBooking(..) with arguments: [Booking(id=null, trainId=9, authUserId=null, seatsBooked=2, bookingTime=null, status=null)]
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.service.BookingServiceImpl      - Creating booking for trainId: 9, userId: 9, seats: 2
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ➡️ TrainClient.getTrainById(..) with arguments: [9]
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ✅ TrainClient.getTrainById(..) with result: <200 OK OK,{id=9, trainName=Pune Intercity, source=Nagpur, destination=Pune Junction, departureTime=2025-04-09T07:15:00, arrivalTime=2025-04-09T15:00:00, availableSeats=174, bookedSeats=226},[cache-control:"no-cache, no-store, max-age=0, must-revalidate", connection:"keep-alive", content-type:"application/json", date:"Fri, 25 Apr 2025 19:14:59 GMT", expires:"0", keep-alive:"timeout=60", pragma:"no-cache", transfer-encoding:"chunked", x-content-type-options:"nosniff", x-frame-options:"DENY", x-xss-protection:"0"]>
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ⏱️ getTrainById executed in 8 ms
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.service.BookingServiceImpl      - Train service response status: 200 OK
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.service.BookingServiceImpl      - Available seats: 174
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ➡️ TrainClient.bookSeats(..) with arguments: [9, 2]
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ✅ TrainClient.bookSeats(..) with result: <200 OK OK,Seats booked successfully!,[cache-control:"no-cache, no-store, max-age=0, must-revalidate", connection:"keep-alive", content-length:"26", content-type:"text/plain;charset=UTF-8", date:"Fri, 25 Apr 2025 19:14:59 GMT", expires:"0", keep-alive:"timeout=60", pragma:"no-cache", x-content-type-options:"nosniff", x-frame-options:"DENY", x-xss-protection:"0"]>
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.FeignClientLoggerAspect        - [FeignClient] ⏱️ bookSeats executed in 14 ms
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.service.BookingServiceImpl      - Seat booking response status: 200 OK
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.service.BookingServiceImpl      - Booking saved successfully: Booking(id=14, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:59.286037400, status=CONFIRMED)
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.aspect.ServiceLoggerAspect      - [Service]     ✅ BookingServiceImpl.createBooking(..) with result: Booking(id=14, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:59.286037400, status=CONFIRMED)
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.booking.aspect.ServiceLoggerAspect      - [Service]     ⏱️ BookingServiceImpl.createBooking(..) executed in 27 ms
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.ControllerLoggerAspect         - [Controller]  ✅ BookingController.createBooking(..) with result: <201 CREATED Created,Booking(id=14, trainId=9, authUserId=9, seatsBooked=2, bookingTime=2025-04-26T00:44:59.286037400, status=CONFIRMED),[]>
+2025-04-26 00:44:59 [34m INFO[0;39m --- [BOOKING-SERVICE] [nio-8084-exec-3] c.b.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ BookingController.createBooking(..) executed in 27 ms
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] minMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry         - Unregistering application BOOKING-SERVICE with eureka with status DOWN
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745608749672, current=DOWN, previous=UP]
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084: registering service...
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown         - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol       - Pausing ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - registration status: 204
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown         - Graceful shutdown complete
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol       - Stopping ProtocolHandler ["http-nio-8084"]
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] .j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown initiated...
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown completed.
+2025-04-26 00:49:09 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Shutting down DiscoveryClient ...
+2025-04-26 00:49:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Unregistering ...
+2025-04-26 00:49:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_BOOKING-SERVICE/Mayank:BOOKING-SERVICE:8084 - deregister  status: 200
+2025-04-26 00:49:12 [34m INFO[0;39m --- [BOOKING-SERVICE] [on(8)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Completed shut down of DiscoveryClient

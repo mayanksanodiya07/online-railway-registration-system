@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+ 	<springProperty name="APP_NAME" source="spring.application.name"/>
  
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) [%thread] %logger{36} - %msg%n</pattern>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %highlight(%5level) --- [${APP_NAME}] [%15.15thread] %-41.41logger{36} - %msg%n
+            </pattern>
         </encoder>
     </appender>
  
@@ -14,11 +17,11 @@
             
             <fileNamePattern>logs/auth-service-%d{yy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
-            
         </rollingPolicy>
-
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+           <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %highlight(%5level) --- [${APP_NAME}] [%15.15thread] %-41.41logger{36} - %msg%n
+            </pattern>
         </encoder>
     </appender>
 

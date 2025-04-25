@@ -12,8 +12,6 @@ import com.auth.util.JwtUtil;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -27,8 +25,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AuthServiceImpl implements AuthService{
-	
-	private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
     
 	@Autowired
     private UserRepository userRepository;
@@ -47,15 +43,11 @@ public class AuthServiceImpl implements AuthService{
     @Override
     public User registerUser(User user) {
 
-        logger.info("Attempting to register user: {}", user.getUsername());
-
         if (userRepository.existsByUsername(user.getUsername())) {
-            logger.warn("Registration failed - username '{}' already exists.", user.getUsername());
             throw new DuplicateUserException("Username already exists");
         }
 
         if (!isValidPassword(user.getPassword())) {
-            logger.warn("Registration failed - password does not meet security requirements for user '{}'.", user.getUsername());
             throw new InvalidPasswordException("Password must be at least 6 characters long, include a number, a special character, an uppercase letter, and a lowercase letter");
         }
 
@@ -63,8 +55,7 @@ public class AuthServiceImpl implements AuthService{
         user.setPassword(encoder.encode(user.getPassword()));
 
         User savedUser = userRepository.save(user);
-        logger.info("User '{}' saved to the database with ID: {}", savedUser.getUsername(), savedUser.getId());
-
+        
         String jwt = jwtUtil.generateInternalToken(savedUser.getId(), savedUser.getUsername(), savedUser.getRoles());
 
         UserDTO dto = new UserDTO();
@@ -73,30 +64,23 @@ public class AuthServiceImpl implements AuthService{
         dto.setAuthUserId(savedUser.getId());
 
         try {
-            logger.info("Calling User Service to create corresponding user entry...");
             userClient.createUser(dto, "Bearer " + jwt);
-            logger.info("User Service call successful for user '{}'.", savedUser.getUsername());
         } catch (Exception ex) {
-            logger.error("User Service call failed for '{}'. Rolling back registration.", savedUser.getUsername(), ex);
             userRepository.deleteById(savedUser.getId());
             throw new ExternalServiceException("Failed to create user in User Service. Please try again later.");
         }
 
-        logger.info("User '{}' registered successfully.", savedUser.getUsername());
         return savedUser;
     }
 
     @Override
     public List<User> getUsers() {
-        logger.info("Fetching list of all registered users.");
         return userRepository.findAll();
     }
 
     @Override
     public LoginResponse login(String username, String password) { 
         try {
-            logger.info("Login attempt for username: {}", username);
-
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(username, password)
             );
@@ -104,15 +88,12 @@ public class AuthServiceImpl implements AuthService{
             SecurityContextHolder.getContext().setAuthentication(authentication);
             User user = userRepository.findByUsername(username);
 
-            logger.info("Login successful for user: {} (ID: {})", username, user.getId());
-            
             String token = jwtUtil.generateToken(user.getId(), username, user.getRoles());
             
             return new LoginResponse(user.getId(), token); 
 
         } catch (BadCredentialsException e) {
-            logger.warn("Login failed for username: {}", username);
-            throw new InvalidCredentialsException("Invalid username or password");
+        	throw new InvalidCredentialsException("Invalid username or password");
         }
     }
 
@@ -126,7 +107,6 @@ public class AuthServiceImpl implements AuthService{
         }
 
         userRepository.delete(user);
-        logger.info("User '{}' deleted from AuthService", username);
     }
 
     private boolean isValidPassword(String password) {

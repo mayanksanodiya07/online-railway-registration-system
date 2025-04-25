@@ -1,4 +1,4 @@
-package com.admin.aspect;
+package com.train.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -17,13 +17,13 @@ public class ServiceLoggerAspect {
     private static final Logger logger = LoggerFactory.getLogger(ServiceLoggerAspect.class);
 
     // Pointcut for all methods in services
-    @Pointcut("within(com.admin.service..*)")
+    @Pointcut("within(com.train.service..*)")
     public void serviceMethods() {}
 
     // Log method start and input args
     @Before("serviceMethods()")
     public void logBefore(JoinPoint joinPoint) {
-        logger.info("[Service]    ➡️ {} with arguments: {}",
+        logger.info("[Service]     ➡️ {} with arguments: {}",
         		joinPoint.getSignature().toShortString(),
                 Arrays.toString(joinPoint.getArgs()));
     }
@@ -31,7 +31,7 @@ public class ServiceLoggerAspect {
     // Log method return
     @AfterReturning(pointcut = "serviceMethods()", returning = "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
-        logger.info("[Service]    ✅ {} with result: {}",
+        logger.info("[Service]     ✅ {} with result: {}",
                 joinPoint.getSignature().toShortString(),
                 result);
     }
@@ -39,7 +39,7 @@ public class ServiceLoggerAspect {
     // Log exceptions
     @AfterThrowing(pointcut = "serviceMethods()", throwing = "ex")
     public void logAfterThrowing(JoinPoint joinPoint, Throwable ex) {
-        logger.error("[Service]    ❌ {} threw: {} | {}",
+        logger.error("[Service]     ❌ {} threw: {} | {}",
                 joinPoint.getSignature().toShortString(),
                 ex.getMessage(), ex.getClass().getSimpleName());
     }
@@ -51,7 +51,7 @@ public class ServiceLoggerAspect {
         Object result = joinPoint.proceed();  // proceed with method execution
         long duration = System.currentTimeMillis() - start;
 
-        logger.info("[Service]    ⏱️ {} executed in {} ms",
+        logger.info("[Service]     ⏱️ {} executed in {} ms",
 //                joinPoint.getSignature().getDeclaringTypeName(),
                 joinPoint.getSignature().toShortString(),
                 duration);

@@ -67,7 +67,6 @@ public class TrainController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Train> getTrainById(@PathVariable Long id) {
 		try {
-			System.out.println(id);
 			Train train = trainService.getTrainById(id);
 			return ResponseEntity.ok(train);
 		} catch (ResponseStatusException e) {
@@ -107,8 +106,7 @@ public class TrainController {
 
 	@PatchMapping("/{id}/source")
 	public ResponseEntity<Train> updateTrainSource(@PathVariable Long id, @RequestParam String source) {
-		System.out.println(id);
-		
+
 		try {
 			
 			Train updatedTrain = trainService.updateTrainSource(id, source);

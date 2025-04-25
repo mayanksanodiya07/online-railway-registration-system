@@ -11,11 +11,11 @@
     </appender>
  
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/admin-service.log</file>
+        <file>logs/train-service.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             
-            <fileNamePattern>logs/admin-service-%d{yy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>logs/train-service-%d{yy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>

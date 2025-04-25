@@ -2,9 +2,6 @@ package com.auth.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +16,6 @@ import com.auth.service.AuthServiceImpl;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     @Autowired
     private AuthServiceImpl authService;
@@ -27,7 +23,6 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody User user) {
     	
-        logger.info("Received registration request for username: {}", user.getUsername());
         authService.registerUser(user);
         
         return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully!");
@@ -36,7 +31,6 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
     	
-        logger.info("Login request received for username: {}", request.getUsername());
         LoginResponse token = authService.login(request.getUsername(), request.getPassword());
         
         return ResponseEntity.ok(token);
@@ -51,7 +45,6 @@ public class AuthController {
 
     @GetMapping("/getAll")
     public List<User> getAll() {
-        logger.info("Fetching all users");
         return authService.getUsers();
     }
 }
