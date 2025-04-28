@@ -1,0 +1,640 @@
+2025-04-26 01:03:07 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.train.TrainService1Application        - Starting TrainService1Application using Java 21.0.6 with PID 14052 (C:\Users\Hp\Desktop\Case Study\RMS\TrainService\target\classes started by Hp in C:\Users\Hp\Desktop\Case Study\RMS\TrainService)
+2025-04-26 01:03:07 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.train.TrainService1Application        - No active profile set, falling back to 1 default profile: "default"
+2025-04-26 01:03:08 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-26 01:03:08 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interface.
+2025-04-26 01:03:08 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.cloud.context.scope.GenericScope      - BeanFactory id=0fc5400d-8fe1-3119-9883-4cc390095e63
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat initialized with port 8083 (http)
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Initializing ProtocolHandler ["http-nio-8083"]
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.a.catalina.core.StandardService         - Starting service [Tomcat]
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.a.catalina.core.StandardEngine          - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring embedded WebApplicationContext
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] .w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1252 ms
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.h.jpa.internal.util.LogHelper           - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] org.hibernate.Version                     - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.h.c.i.RegionFactoryInitiator            - HHH000026: Second-level cache disabled
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo       - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Starting...
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool         - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b06681c
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Start completed.
+2025-04-26 01:03:09 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.hibernate.orm.connections.pooling       - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-26 01:03:10 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator        - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-26 01:03:10 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] .j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 01:03:10 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.d.j.r.query.QueryEnhancerFactory      - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-26 01:03:11 [31m WARN[0;39m --- [TRAIN-SERVICE] [           main] .JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-26 01:03:11 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.v.b.OptionalValidatorFactoryBean      - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-26 01:03:11 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] .DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-04-26 01:03:11 [31m WARN[0;39m --- [TRAIN-SERVICE] [           main] figuration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 01:03:11 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory        - Setting initial instance status as: STARTING
+2025-04-26 01:03:11 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Initializing Eureka in region us-east-1
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Disable delta property : false
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Single vip registry refresh property : null
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Force full registry fetch : false
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application is null : false
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Registered Applications size is zero : true
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Application version is -1: true
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Getting all instance registry info from the eureka server
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - The response status is 200
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Starting heartbeat executor: renew interval is: 30
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator      - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Discovery Client initialized at timestamp 1745609592271 with initial instances count: 3
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry         - Registering application TRAIN-SERVICE with eureka with status UP
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745609592277, current=UP, previous=STARTING]
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.a.coyote.http11.Http11NioProtocol       - Starting ProtocolHandler ["http-nio-8083"]
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083: registering service...
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.b.w.e.tomcat.TomcatWebServer          - Tomcat started on port 8083 (http) with context path '/'
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8083
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083 - registration status: 204
+2025-04-26 01:03:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [           main] com.train.TrainService1Application        - Started TrainService1Application in 4.79 seconds (process running for 5.53)
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]        - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet         - Initializing Servlet 'dispatcherServlet'
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet         - Completed initialization in 1 ms
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.t.aspect.ControllerLoggerAspect         - [Controller]  ➡️ TrainController.getAllTrains() with arguments: []
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.train.aspect.ServiceLoggerAspect        - [Service]     ➡️ TrainServiceImpl.getAllTrains() with arguments: []
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.train.aspect.ServiceLoggerAspect        - [Service]     ✅ TrainServiceImpl.getAllTrains() with result: [Train(id=1, trainName=Shatabdi Express, source=Delhi, destination=Bhopal, departureTime=2025-04-15T09:30, arrivalTime=2025-04-15T14:00, availableSeats=120, bookedSeats=10), Train(id=2, trainName=Express 101, source=Delhi, destination=Mumbai, departureTime=2025-04-08T09:00, arrivalTime=2025-04-08T18:00, availableSeats=100, bookedSeats=10), Train(id=3, trainName=Shatabdi 202, source=Bangalore, destination=Chennai, departureTime=2025-04-08T07:30, arrivalTime=2025-04-08T11:00, availableSeats=67, bookedSeats=18), Train(id=4, trainName=Mumbai Express, source=Nagpur, destination=Mumbai CST, departureTime=2025-04-09T06:00, arrivalTime=2025-04-09T19:30, availableSeats=120, bookedSeats=350), Train(id=5, trainName=Howrah Mail, source=Nagpur, destination=Kolkata, departureTime=2025-04-08T18:45, arrivalTime=2025-04-09T10:15, availableSeats=85, bookedSeats=415), Train(id=6, trainName=Delhi Fast, source=Nagpur, destination=New Delhi, departureTime=2025-04-09T10:20, arrivalTime=2025-04-10T01:00, availableSeats=150, bookedSeats=280), Train(id=7, trainName=Chennai Central Express, source=Nagpur, destination=Chennai Central, departureTime=2025-04-08T22:10, arrivalTime=2025-04-10T08:50, availableSeats=55, bookedSeats=445), Train(id=8, trainName=Bangalore City Superfast, source=Nagpur, destination=Bangalore City, departureTime=2025-04-09T14:30, arrivalTime=2025-04-10T05:45, availableSeats=90, bookedSeats=310), Train(id=9, trainName=Pune Intercity, source=Nagpur, destination=Pune Junction, departureTime=2025-04-09T07:15, arrivalTime=2025-04-09T15:00, availableSeats=172, bookedSeats=228), Train(id=10, trainName=Ahmedabad Express, source=Nagpur, destination=Ahmedabad Junction, departureTime=2025-04-08T11:00, arrivalTime=2025-04-09T02:30, availableSeats=82, bookedSeats=468), Train(id=11, trainName=Jaipur Special, source=Nagpur, destination=Jaipur Junction, departureTime=2025-04-09T16:50, arrivalTime=2025-04-10T07:20, availableSeats=110, bookedSeats=290), Train(id=12, trainName=Hyderabad Deccan Express, source=Nagpur, destination=Hyderabad Deccan, departureTime=2025-04-08T09:30, arrivalTime=2025-04-08T17:45, availableSeats=135, bookedSeats=265), Train(id=13, trainName=Amritsar Mail, source=Nagpur, destination=Amritsar Junction, departureTime=2025-04-09T20:00, arrivalTime=2025-04-10T14:00, availableSeats=60, bookedSeats=400), Train(id=14, trainName=Surat Passenger, source=Nagpur, destination=Surat, departureTime=2025-04-08T14:00, arrivalTime=2025-04-08T23:15, availableSeats=190, bookedSeats=210), Train(id=15, trainName=Lucknow Express, source=Nagpur, destination=Lucknow Charbagh, departureTime=2025-04-09T12:30, arrivalTime=2025-04-10T03:00, availableSeats=75, bookedSeats=325), Train(id=16, trainName=Bhopal Shatabdi, source=Nagpur, destination=Bhopal Junction, departureTime=2025-04-08T17:30, arrivalTime=2025-04-08T22:45, availableSeats=160, bookedSeats=240), Train(id=17, trainName=Indore Intercity, source=Nagpur, destination=Indore Junction, departureTime=2025-04-09T09:00, arrivalTime=2025-04-09T17:00, availableSeats=100, bookedSeats=300), Train(id=18, trainName=Vadodara Express, source=Nagpur, destination=Vadodara Junction, departureTime=2025-04-08T21:15, arrivalTime=2025-04-09T08:30, availableSeats=80, bookedSeats=370), Train(id=19, trainName=Coimbatore Express, source=Nagpur, destination=Coimbatore Junction, departureTime=2025-04-09T15:45, arrivalTime=2025-04-10T06:15, availableSeats=45, bookedSeats=455), Train(id=20, trainName=Visakhapatnam Express, source=Nagpur, destination=Visakhapatnam, departureTime=2025-04-08T07:45, arrivalTime=2025-04-08T19:00, availableSeats=125, bookedSeats=275), Train(id=21, trainName=Guwahati Express, source=Nagpur, destination=Guwahati, departureTime=2025-04-09T23:30, arrivalTime=2025-04-11T05:00, availableSeats=30, bookedSeats=470), Train(id=22, trainName=Rajkot Express, source=Nagpur, destination=Rajkot Junction, departureTime=2025-04-08T19:00, arrivalTime=2025-04-09T05:30, availableSeats=95, bookedSeats=305), Train(id=23, trainName=Tirupati Express, source=Nagpur, destination=Tirupati, departureTime=2025-04-09T11:45, arrivalTime=2025-04-10T01:15, availableSeats=140, bookedSeats=260), Train(id=24, trainName=Express 101, source=HIMACHAL, destination=GOA, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=200, bookedSeats=30), Train(id=25, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=31, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=32, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=33, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=34, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=35, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=36, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=37, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=38, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=39, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=41, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=42, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=43, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=44, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=45, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=46, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=47, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=48, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=49, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=50, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=51, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=52, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=53, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=54, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=55, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=56, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=57, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=58, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=59, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=60, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=61, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=62, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=63, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=64, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=65, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=66, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=67, trainName=Express 101, source=Himachal, destination=Goa, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=200, bookedSeats=30), Train(id=70, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=71, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=72, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=73, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=74, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=75, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=76, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=77, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=78, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=79, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=80, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=81, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=82, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=83, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=84, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=85, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30)]
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.train.aspect.ServiceLoggerAspect        - [Service]     ⏱️ TrainServiceImpl.getAllTrains() executed in 115 ms
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.t.aspect.ControllerLoggerAspect         - [Controller]  ✅ TrainController.getAllTrains() with result: <200 OK OK,[Train(id=1, trainName=Shatabdi Express, source=Delhi, destination=Bhopal, departureTime=2025-04-15T09:30, arrivalTime=2025-04-15T14:00, availableSeats=120, bookedSeats=10), Train(id=2, trainName=Express 101, source=Delhi, destination=Mumbai, departureTime=2025-04-08T09:00, arrivalTime=2025-04-08T18:00, availableSeats=100, bookedSeats=10), Train(id=3, trainName=Shatabdi 202, source=Bangalore, destination=Chennai, departureTime=2025-04-08T07:30, arrivalTime=2025-04-08T11:00, availableSeats=67, bookedSeats=18), Train(id=4, trainName=Mumbai Express, source=Nagpur, destination=Mumbai CST, departureTime=2025-04-09T06:00, arrivalTime=2025-04-09T19:30, availableSeats=120, bookedSeats=350), Train(id=5, trainName=Howrah Mail, source=Nagpur, destination=Kolkata, departureTime=2025-04-08T18:45, arrivalTime=2025-04-09T10:15, availableSeats=85, bookedSeats=415), Train(id=6, trainName=Delhi Fast, source=Nagpur, destination=New Delhi, departureTime=2025-04-09T10:20, arrivalTime=2025-04-10T01:00, availableSeats=150, bookedSeats=280), Train(id=7, trainName=Chennai Central Express, source=Nagpur, destination=Chennai Central, departureTime=2025-04-08T22:10, arrivalTime=2025-04-10T08:50, availableSeats=55, bookedSeats=445), Train(id=8, trainName=Bangalore City Superfast, source=Nagpur, destination=Bangalore City, departureTime=2025-04-09T14:30, arrivalTime=2025-04-10T05:45, availableSeats=90, bookedSeats=310), Train(id=9, trainName=Pune Intercity, source=Nagpur, destination=Pune Junction, departureTime=2025-04-09T07:15, arrivalTime=2025-04-09T15:00, availableSeats=172, bookedSeats=228), Train(id=10, trainName=Ahmedabad Express, source=Nagpur, destination=Ahmedabad Junction, departureTime=2025-04-08T11:00, arrivalTime=2025-04-09T02:30, availableSeats=82, bookedSeats=468), Train(id=11, trainName=Jaipur Special, source=Nagpur, destination=Jaipur Junction, departureTime=2025-04-09T16:50, arrivalTime=2025-04-10T07:20, availableSeats=110, bookedSeats=290), Train(id=12, trainName=Hyderabad Deccan Express, source=Nagpur, destination=Hyderabad Deccan, departureTime=2025-04-08T09:30, arrivalTime=2025-04-08T17:45, availableSeats=135, bookedSeats=265), Train(id=13, trainName=Amritsar Mail, source=Nagpur, destination=Amritsar Junction, departureTime=2025-04-09T20:00, arrivalTime=2025-04-10T14:00, availableSeats=60, bookedSeats=400), Train(id=14, trainName=Surat Passenger, source=Nagpur, destination=Surat, departureTime=2025-04-08T14:00, arrivalTime=2025-04-08T23:15, availableSeats=190, bookedSeats=210), Train(id=15, trainName=Lucknow Express, source=Nagpur, destination=Lucknow Charbagh, departureTime=2025-04-09T12:30, arrivalTime=2025-04-10T03:00, availableSeats=75, bookedSeats=325), Train(id=16, trainName=Bhopal Shatabdi, source=Nagpur, destination=Bhopal Junction, departureTime=2025-04-08T17:30, arrivalTime=2025-04-08T22:45, availableSeats=160, bookedSeats=240), Train(id=17, trainName=Indore Intercity, source=Nagpur, destination=Indore Junction, departureTime=2025-04-09T09:00, arrivalTime=2025-04-09T17:00, availableSeats=100, bookedSeats=300), Train(id=18, trainName=Vadodara Express, source=Nagpur, destination=Vadodara Junction, departureTime=2025-04-08T21:15, arrivalTime=2025-04-09T08:30, availableSeats=80, bookedSeats=370), Train(id=19, trainName=Coimbatore Express, source=Nagpur, destination=Coimbatore Junction, departureTime=2025-04-09T15:45, arrivalTime=2025-04-10T06:15, availableSeats=45, bookedSeats=455), Train(id=20, trainName=Visakhapatnam Express, source=Nagpur, destination=Visakhapatnam, departureTime=2025-04-08T07:45, arrivalTime=2025-04-08T19:00, availableSeats=125, bookedSeats=275), Train(id=21, trainName=Guwahati Express, source=Nagpur, destination=Guwahati, departureTime=2025-04-09T23:30, arrivalTime=2025-04-11T05:00, availableSeats=30, bookedSeats=470), Train(id=22, trainName=Rajkot Express, source=Nagpur, destination=Rajkot Junction, departureTime=2025-04-08T19:00, arrivalTime=2025-04-09T05:30, availableSeats=95, bookedSeats=305), Train(id=23, trainName=Tirupati Express, source=Nagpur, destination=Tirupati, departureTime=2025-04-09T11:45, arrivalTime=2025-04-10T01:15, availableSeats=140, bookedSeats=260), Train(id=24, trainName=Express 101, source=HIMACHAL, destination=GOA, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=200, bookedSeats=30), Train(id=25, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=31, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=32, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=33, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=34, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=35, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=36, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=37, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=38, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=39, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=41, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=42, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=43, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=44, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=45, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=46, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=47, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=48, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=49, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=50, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=51, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=52, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=53, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=54, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=55, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=56, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=57, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=58, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=59, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=60, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=61, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=62, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=63, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=64, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=65, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=66, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=67, trainName=Express 101, source=Himachal, destination=Goa, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=200, bookedSeats=30), Train(id=70, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=71, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=72, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=73, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=74, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=75, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=76, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=77, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=78, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=79, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=80, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=81, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=82, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=83, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=84, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30), Train(id=85, trainName=Express 10, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30)],[]>
+2025-04-26 01:03:32 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-1] c.t.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ TrainController.getAllTrains() executed in 120 ms
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.t.aspect.ControllerLoggerAspect         - [Controller]  ➡️ TrainController.getTrainById(..) with arguments: [25]
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.train.aspect.ServiceLoggerAspect        - [Service]     ➡️ TrainServiceImpl.getTrainById(..) with arguments: [25]
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.train.aspect.ServiceLoggerAspect        - [Service]     ✅ TrainServiceImpl.getTrainById(..) with result: Train(id=25, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30)
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.train.aspect.ServiceLoggerAspect        - [Service]     ⏱️ TrainServiceImpl.getTrainById(..) executed in 11 ms
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.t.aspect.ControllerLoggerAspect         - [Controller]  ✅ TrainController.getTrainById(..) with result: <200 OK OK,Train(id=25, trainName=Express 101, source=Mumbai, destination=Delhi, departureTime=2025-04-20T08:30, arrivalTime=2025-04-20T18:45, availableSeats=120, bookedSeats=30),[]>
+2025-04-26 01:04:21 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-3] c.t.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ TrainController.getTrainById(..) executed in 13 ms
+2025-04-26 01:04:45 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-4] c.t.aspect.ControllerLoggerAspect         - [Controller]  ➡️ TrainController.getTrainById(..) with arguments: [250]
+2025-04-26 01:04:45 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-4] c.train.aspect.ServiceLoggerAspect        - [Service]     ➡️ TrainServiceImpl.getTrainById(..) with arguments: [250]
+2025-04-26 01:04:45 [1;31mERROR[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-4] c.train.aspect.ServiceLoggerAspect        - [Service]     ❌ TrainServiceImpl.getTrainById(..) threw: 404 NOT_FOUND "Train not found with ID: 250" | ResponseStatusException
+2025-04-26 01:04:45 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-4] c.t.aspect.ControllerLoggerAspect         - [Controller]  ✅ TrainController.getTrainById(..) with result: <404 NOT_FOUND Not Found,[]>
+2025-04-26 01:04:45 [34m INFO[0;39m --- [TRAIN-SERVICE] [nio-8083-exec-4] c.t.aspect.ControllerLoggerAspect         - [Controller]  ⏱️ TrainController.getTrainById(..) executed in 5 ms
+2025-04-26 01:08:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 01:13:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 01:18:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] minMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry         - Unregistering application TRAIN-SERVICE with eureka with status DOWN
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745610612418, current=DOWN, previous=UP]
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083: registering service...
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown         - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol       - Pausing ProtocolHandler ["http-nio-8083"]
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 more
+
+2025-04-26 01:20:12 [31m WARN[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown         - Graceful shutdown complete
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol       - Stopping ProtocolHandler ["http-nio-8083"]
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] .j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-04-26 01:20:12 [31m WARN[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown initiated...
+2025-04-26 01:20:12 [31m WARN[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-26 01:20:12 [31m WARN[0;39m --- [TRAIN-SERVICE] [foReplicator-%d] c.n.discovery.InstanceInfoReplicator      - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown completed.
+2025-04-26 01:20:12 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Shutting down DiscoveryClient ...
+2025-04-26 01:20:13 [34m INFO[0;39m --- [TRAIN-SERVICE] [beatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 20 more
+
+2025-04-26 01:20:13 [31m WARN[0;39m --- [TRAIN-SERVICE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:13 [1;31mERROR[0;39m --- [TRAIN-SERVICE] [beatExecutor-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-26 01:20:13 [34m INFO[0;39m --- [TRAIN-SERVICE] [reshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-04-26 01:20:13 [31m WARN[0;39m --- [TRAIN-SERVICE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:13 [34m INFO[0;39m --- [TRAIN-SERVICE] [reshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 23 more
+
+2025-04-26 01:20:13 [31m WARN[0;39m --- [TRAIN-SERVICE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:13 [34m INFO[0;39m --- [TRAIN-SERVICE] [reshExecutor-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-04-26 01:20:15 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Unregistering ...
+2025-04-26 01:20:15 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient   - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:702)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1401)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:661)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1394)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 69 more
+
+2025-04-26 01:20:15 [31m WARN[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient     - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-04-26 01:20:15 [1;31mERROR[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_TRAIN-SERVICE/Mayank:TRAIN-SERVICE:8083 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:745)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:702)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1401)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:661)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1394)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-26 01:20:15 [34m INFO[0;39m --- [TRAIN-SERVICE] [n(19)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Completed shut down of DiscoveryClient

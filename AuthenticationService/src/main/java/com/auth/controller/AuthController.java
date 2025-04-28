@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.auth.dto.LoginRequest;
 import com.auth.dto.LoginResponse;
 import com.auth.entity.User;
-import com.auth.service.AuthServiceImpl;
+import com.auth.service.AuthService;
 
 @RestController
 @RequestMapping("/auth")
@@ -18,7 +18,7 @@ public class AuthController {
 
 
     @Autowired
-    private AuthServiceImpl authService;
+    private AuthService authService;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody User user) {
@@ -31,9 +31,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
     	
-        LoginResponse token = authService.login(request.getUsername(), request.getPassword());
+        LoginResponse response = authService.login(request.getUsername(), request.getPassword());
         
-        return ResponseEntity.ok(token);
+        return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("/{username}")

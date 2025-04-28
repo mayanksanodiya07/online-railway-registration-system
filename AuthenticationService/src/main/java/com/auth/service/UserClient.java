@@ -9,7 +9,7 @@ import com.auth.dto.UserDTO;
 
 import feign.FeignException;
 
-@FeignClient(url = "http://localhost:8082", name = "USER-SERVICE")
+@FeignClient( name = "USER-SERVICE")
 public interface UserClient {
 
     @PostMapping("/users")
