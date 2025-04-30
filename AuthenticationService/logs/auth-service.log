@@ -1,0 +1,71 @@
+2025-04-30 00:04:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:09:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:14:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:19:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:24:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ➡️ AuthController.login(..) with arguments: [com.auth.dto.LoginRequest@23177125]
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ AuthServiceImpl.login(..) with arguments: [admin, Aa@123]
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ UserDetailServiceImpl.loadUserByUsername(..) with arguments: [admin]
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ UserDetailServiceImpl.loadUserByUsername(..) with result: org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ UserDetailServiceImpl.loadUserByUsername(..) executed in 33 ms
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ AuthServiceImpl.login(..) with result: com.auth.dto.LoginResponse@4d5f6ea2
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ AuthServiceImpl.login(..) executed in 118 ms
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ✅ AuthController.login(..) with result: <200 OK OK,com.auth.dto.LoginResponse@4d5f6ea2,[]>
+2025-04-30 00:27:59 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-1] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ⏱️ AuthController.login(..) executed in 121 ms
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ➡️ AuthController.login(..) with arguments: [com.auth.dto.LoginRequest@2b56d229]
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ AuthServiceImpl.login(..) with arguments: [admin, Aa@123]
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ UserDetailServiceImpl.loadUserByUsername(..) with arguments: [admin]
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ UserDetailServiceImpl.loadUserByUsername(..) with result: org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ UserDetailServiceImpl.loadUserByUsername(..) executed in 4 ms
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ AuthServiceImpl.login(..) with result: com.auth.dto.LoginResponse@1d74389b
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ AuthServiceImpl.login(..) executed in 89 ms
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ✅ AuthController.login(..) with result: <200 OK OK,com.auth.dto.LoginResponse@1d74389b,[]>
+2025-04-30 00:28:23 [34m INFO[0;39m --- [AUTH-SERVICE] [io-8081-exec-10] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ⏱️ AuthController.login(..) executed in 89 ms
+2025-04-30 00:29:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:34:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:39:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:44:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:49:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ➡️ AuthController.login(..) with arguments: [com.auth.dto.LoginRequest@5f0def58]
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ AuthServiceImpl.login(..) with arguments: [admin, Aa@123]
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ UserDetailServiceImpl.loadUserByUsername(..) with arguments: [admin]
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ UserDetailServiceImpl.loadUserByUsername(..) with result: org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ UserDetailServiceImpl.loadUserByUsername(..) executed in 36 ms
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ AuthServiceImpl.login(..) with result: com.auth.dto.LoginResponse@1fc02501
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ AuthServiceImpl.login(..) executed in 131 ms
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ✅ AuthController.login(..) with result: <200 OK OK,com.auth.dto.LoginResponse@1fc02501,[]>
+2025-04-30 00:52:07 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-3] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ⏱️ AuthController.login(..) executed in 131 ms
+2025-04-30 00:54:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 00:59:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:04:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:09:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ➡️ AuthController.login(..) with arguments: [com.auth.dto.LoginRequest@1b30191a]
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ AuthServiceImpl.login(..) with arguments: [admin, Aa@123]
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ➡️ UserDetailServiceImpl.loadUserByUsername(..) with arguments: [admin]
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ UserDetailServiceImpl.loadUserByUsername(..) with result: org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ UserDetailServiceImpl.loadUserByUsername(..) executed in 96 ms
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ✅ AuthServiceImpl.login(..) with result: com.auth.dto.LoginResponse@6ca85f13
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] com.auth.aspect.ServiceLoggerAspect       - [Service]     ⏱️ AuthServiceImpl.login(..) executed in 192 ms
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ✅ AuthController.login(..) with result: <200 OK OK,com.auth.dto.LoginResponse@6ca85f13,[]>
+2025-04-30 01:10:32 [34m INFO[0;39m --- [AUTH-SERVICE] [nio-8081-exec-6] c.auth.aspect.ControllerLoggerAspect      - [Controller]  ⏱️ AuthController.login(..) executed in 196 ms
+2025-04-30 01:14:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:19:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:24:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:29:25 [34m INFO[0;39m --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver       - Resolving eureka endpoints via configuration
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] minMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry         - Unregistering application AUTH-SERVICE with eureka with status DOWN
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Saw local status change event StatusChangeEvent [timestamp=1745956847426, current=DOWN, previous=UP]
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_AUTH-SERVICE/Mayank:AUTH-SERVICE:8081: registering service...
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [foReplicator-%d] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_AUTH-SERVICE/Mayank:AUTH-SERVICE:8081 - registration status: 204
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown         - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol       - Pausing ProtocolHandler ["http-nio-8081"]
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown         - Graceful shutdown complete
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol       - Stopping ProtocolHandler ["http-nio-8081"]
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] .j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown initiated...
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] com.zaxxer.hikari.HikariDataSource        - HikariPool-1 - Shutdown completed.
+2025-04-30 01:30:47 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Shutting down DiscoveryClient ...
+2025-04-30 01:30:50 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Unregistering ...
+2025-04-30 01:30:50 [31m WARN[0;39m --- [AUTH-SERVICE] [coveryClient-%d] c.n.discovery.TimedSupervisorTask         - task supervisor shutting down, can't accept the task
+2025-04-30 01:30:50 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - DiscoveryClient_AUTH-SERVICE/Mayank:AUTH-SERVICE:8081 - deregister  status: 200
+2025-04-30 01:30:50 [34m INFO[0;39m --- [AUTH-SERVICE] [(440)-127.0.0.1] c.netflix.discovery.DiscoveryClient       - Completed shut down of DiscoveryClient

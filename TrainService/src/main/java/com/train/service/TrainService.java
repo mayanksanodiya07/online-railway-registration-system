@@ -1,6 +1,5 @@
 package com.train.service;
 
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -8,7 +7,7 @@ import com.train.entity.Train;
 
 public interface TrainService {
 
-	 Train addTrain(Train train);
+	Train addTrain(Train train);
 
 	List<Train> addMultipleTrains(List<Train> trains);
 

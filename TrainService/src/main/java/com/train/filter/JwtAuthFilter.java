@@ -31,7 +31,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String authHeader = request.getHeader("Authorization");
-        
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
 
@@ -41,10 +40,12 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 String issuer = claims.getIssuer();
                 
                 if ("booking-service".equals(issuer) || "admin-service".equals(issuer)) {
+//                	if (true) {
                 	
                     String serviceName = claims.getSubject(); 
-                    
+//                    String serviceName = "admin-service";
                     String serviceRole = claims.get("serviceRole", String.class); 
+//                    String serviceRole = "ADMIN-SERVICE"; 
 
                     List<GrantedAuthority> authorities = List.of(
                             new SimpleGrantedAuthority("ROLE_" + serviceRole)

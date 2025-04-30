@@ -16,8 +16,8 @@ public class JwtUtil {
 	
 	public String generateInternalToken() {
 		String token = Jwts.builder()
-				.subject("booking-service")
-				.issuer("booking-service")  
+				.subject("admin-service")
+				.issuer("admin-service")  
 	    		.claim("serviceRole", "ADMIN-SERVICE")  
 	    		.issuedAt(new Date())
 	    		.expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))

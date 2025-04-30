@@ -2,6 +2,9 @@ package com.admin.controller;
 
 import com.admin.model.Train;
 import com.admin.service.AdminService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +20,7 @@ public class AdminController {
 
     // Add multiple trains
     @PostMapping("/bulk")
-    public ResponseEntity<List<Train>> addMultipleTrains(@RequestBody List<Train> trains) {
+    public ResponseEntity<List<Train>> addMultipleTrains(@RequestBody List<@Valid Train> trains) {
         List<Train> addedTrains = adminService.addMultipleTrains(trains);
         return ResponseEntity.ok(addedTrains);
     }

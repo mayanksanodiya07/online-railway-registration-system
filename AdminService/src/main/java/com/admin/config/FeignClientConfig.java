@@ -33,7 +33,9 @@ public class FeignClientConfig {
  
         @Override
         public Exception decode(String methodKey, Response response) {
+        	
             int status = response.status();
+            System.out.println(response);
             System.out.println(status);
             if (status == 404) {
                 return new TrainNotFoundException("Requested resource not found (404).");

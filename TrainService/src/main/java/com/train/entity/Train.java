@@ -2,10 +2,8 @@ package com.train.entity;
  
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
+import lombok.Data; 
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -50,4 +48,16 @@ public class Train {
 	@NotNull(message = "Booked seats are required")
 	@Min(value = 0, message = "Booked seats must be at least 0")
 	private int bookedSeats;
+	
+	public Train(Train other) {
+	    this.id = other.getId();
+	    this.trainName = other.getTrainName();
+	    this.source = other.getSource();
+	    this.destination = other.getDestination();
+	    this.departureTime = other.getDepartureTime();
+	    this.arrivalTime = other.getArrivalTime();
+	    this.bookedSeats = other.getBookedSeats();
+	    this.availableSeats = other.getAvailableSeats();
+	}
+
 }
