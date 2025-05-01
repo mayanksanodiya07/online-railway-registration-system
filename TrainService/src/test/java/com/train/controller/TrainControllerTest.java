@@ -21,6 +21,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
@@ -45,6 +46,8 @@ public class TrainControllerTest {
     private ObjectMapper objectMapper;
 
     private Train train1, train2;
+    
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
 
     @BeforeEach
     public void setUp() {
@@ -180,9 +183,9 @@ public class TrainControllerTest {
                         .param("departureTime", newTime.toString()))
                 .andExpect(status().isOk())
                 .andDo(print())
-                .andExpect(jsonPath("$.departureTime").value(newTime.toString()));
+                .andExpect(jsonPath("$.departureTime").value(newTime.format(formatter)));
     }
-    
+
     @Test
     @WithMockUser(roles = "ADMIN-SERVICE")
     public void testUpdateArrivalTime() throws Exception {
@@ -194,7 +197,7 @@ public class TrainControllerTest {
         mockMvc.perform(patch("/trains/1/arrival-time")
                         .param("arrivalTime", newTime.toString()))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.arrivalTime").value(newTime.toString()));
+                .andExpect(jsonPath("$.arrivalTime").value(newTime.format(formatter)));
     }
     
     @Test
@@ -213,8 +216,8 @@ public class TrainControllerTest {
                         .param("departureTime", departure.toString())
                         .param("arrivalTime", arrival.toString()))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.departureTime").value(departure.toString()))
-                .andExpect(jsonPath("$.arrivalTime").value(arrival.toString()));
+                .andExpect(jsonPath("$.departureTime").value(departure.format(formatter)))
+                .andExpect(jsonPath("$.arrivalTime").value(arrival.format(formatter)));
     }
     
     @Test

@@ -11,6 +11,7 @@ import com.train.entity.Train;
 import jakarta.transaction.Transactional;
 
 public interface TrainRepository extends JpaRepository<Train, Long> {
+	
 	List<Train> findBySourceAndDestination(String source, String destination);
 
 	@Transactional
